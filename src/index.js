@@ -6,9 +6,9 @@ import App from './components/App.jsx';
 
 const store = configureStore();
 
-store.subscribe(() => {
-    console.log(store.getState(), '<======== subscribe state');
-});
+// store.subscribe(() => {
+//     console.log(store.getState(), '<======== subscribe state');
+// });
 
 ReactDOM.render(
     <Provider store={store}>

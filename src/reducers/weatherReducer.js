@@ -18,9 +18,6 @@ export default function reducer(state = initialState, action) {
 
         case LOAD_DATA_REQUESTED:
             return {
-                // ...state,
-                // data: action.data,
-                // errors: action.errors
                 city: state.city,
                 data: state.data,
                 errors: action.errors
@@ -28,17 +25,10 @@ export default function reducer(state = initialState, action) {
 
         case LOAD_DATA_OK:
             return {
-                // ...state, 
-                // data: action.data,
-                // errors: action.errors
                 city: state.city,
                 data: [ ...state, action.data],
                 errors: action.errors
             };
-                // data: action.data.map(item => _.assign({}, item, {
-                //     id: _.uniqueId(),
-                //     visible: false
-                // })),
 
         case LOAD_DATA_FAIL:
             return {

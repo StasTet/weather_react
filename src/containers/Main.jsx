@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
-import _ from 'lodash';
+import { uniqueId } from 'lodash';
 import * as weatherActions from '../actions/weatherAction';
 import { View } from '../components/View.jsx';
 import Form from '../components/Form.jsx';
@@ -13,7 +13,6 @@ class Main extends Component {
 
         this.key = '862dc7cbbdc5915f4aa2bdec7b31dbdd';
         
-
         this.handleSubmit = this.handleSubmit.bind(this);
     }
 
@@ -45,8 +44,7 @@ class Main extends Component {
         return (
             <div>
                 <Form onChildClick={this.handleSubmit}/>
-                { this.props.weather.data.map( item => <View key={_.uniqueId()} data={item} /> ) }
-                
+                { this.props.weather.data.map( item => <View key={uniqueId()} data={item} /> ) }
             </div>
         );
     }

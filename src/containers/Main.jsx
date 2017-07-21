@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
 import { uniqueId } from 'lodash';
@@ -60,6 +61,16 @@ const mapDispatchToProps = (dispatch) => {
     return {
         weatherActions: bindActionCreators(weatherActions, dispatch)
     }
+}
+
+Main.propTypes = {
+    text: React.PropTypes.string.isRequired,
+    cityName: React.PropTypes.string.isRequired
+}
+
+Main.defaultProps = {
+    text: '',
+    cityName: '',
 }
 
 export default connect(mapStateToProps, mapDispatchToProps)(Main);

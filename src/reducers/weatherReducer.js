@@ -1,4 +1,3 @@
-// import _ from 'lodash';
 import {
     LOAD_DATA_REQUESTED,
     LOAD_DATA_OK,

@@ -1,7 +1,7 @@
 import React from 'react';
 
 export const View = (item) => {
-
+    
     const data = item.data;
     const name = data.name;
     const wind = data.wind.speed;
